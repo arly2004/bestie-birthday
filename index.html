@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8f3e8" />
+  <title>A Birthday Letter For You ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Vintage GeoCities decorations chosen by Arly. If an archived GIF is unavailable, it hides itself. -->
+  <div class="birthday-decorations" aria-hidden="true">
+    <img class="decoration balloons balloons-left" src="https://web.archive.org/web/20091022062908im_/http://www.geocities.com/jillybean15_98/balloon4.gif" alt="" onerror="this.style.display='none'">
+    <img class="decoration balloons balloons-right" src="https://web.archive.org/web/20091022062908im_/http://www.geocities.com/jillybean15_98/balloon4.gif" alt="" onerror="this.style.display='none'">
+
+  </div>
+  <main class="site">
+    <div class="eyebrow">A little something made with love</div>
+    <p class="intro">To the girl who makes ordinary days feel special.</p>
+    <div class="scene">
+      <div class="envelope" id="envelope" aria-label="Birthday envelope">
+        <div class="envelope-back"></div>
+        <div class="envelope-letter-preview">for you, always ♡</div>
+        <div class="envelope-front"></div>
+        <div class="envelope-flap"></div>
+        <button class="photo-button" id="openBtn" aria-label="Open your birthday letter">
+          <img src="images/baby-photo.jpg" alt="Baby photo" onerror="this.style.display='none'; this.parentElement.classList.add('photo-fallback')" />
+          <span class="fallback-heart" aria-hidden="true">♡</span>
+          <span class="open-label">Open Me, Birthday Girl!</span>
+        </button>
+      </div>
+    </div>
+    <p class="hint">a little birthday magic is waiting inside ♡</p>
+    <button class="music-toggle" id="musicBtn" aria-pressed="false">♫ Play birthday melody</button>
+    <audio id="birthdayMusic" src="music/birthday-melody.wav" loop preload="none"></audio>
+  </main>
+
+  <div class="overlay" id="letterOverlay" aria-hidden="true">
+    <div class="paper" role="dialog" aria-modal="true" aria-labelledby="letterTitle">
+      <button class="close" id="closeBtn" aria-label="Close letter">×</button>
+      <div class="paper-top">✦ &nbsp; A letter just for you &nbsp; ✦</div>
+      <h2 id="letterTitle"> To My Beautiful Bestie, Happy Birthday! 🎀💗</h2>
+      <div class="letter-body">
+        <p class="birthday-shout"><strong>HAPPYYYY BIRTHDAYYYY TO MY GIRLLLL!!! 🥹💕🎂</strong></p>
+        <div class="letter-deco"><img src="https://web.archive.org/web/20090803175612im_/http://hk.geocities.com/snoopylingc/birthday.gif" alt="Birthday Snoopy" onerror="this.style.display='none'" /></div>
+        <p>Another year of life, another year of beautiful memories, and another year of me being so grateful to have you in my life. I honestly don't even know where to begin because there are so many things I want to say to you.</p>
+        <p>First of all, I want you to know how much I love and appreciate you. We've been friends for over four years now, and looking back, it's crazy how many memories we've made together. From our random conversations, our endless FaceTime calls, laughing over the most ridiculous things, playing games, studying together (or pretending to study sometimes 😭), to simply sitting in silence on the phone. It's the little things that have made our friendship so special to me.</p>
+        <p>One thing I love about our friendship is that we don't always have to be doing something exciting to enjoy each other's company. Sometimes just knowing you're there is enough. You've become such a familiar and comforting part of my life, and I don't ever want to take that for granted.</p>
+        <p>I know life isn't always easy, and we're both growing, learning, and figuring things out as we go. But I hope you always remember how special you are, not just to me but to everyone who has the privilege of knowing you. You have so much to offer this world, and I hope you never forget your worth or how deeply loved you are.</p>
+        <p>As you step into this new chapter of your life, I hope this year brings you genuine happiness, peace of mind, exciting opportunities, beautiful memories, and so many reasons to smile. I hope you accomplish everything you've been working toward, even the dreams you haven't told anyone about yet. You deserve to experience so many wonderful things.</p>
+        <p>Thank you for being you. Thank you for the laughter, the memories, the conversations, and even the little moments that probably seem ordinary but mean so much to me. Thank you for allowing me to be part of your life and for being part of mine.</p>
+        <p>We've had our little arguments and misunderstandings, but none of that changes how much you mean to me. Every moment has taught us something about each other, and I'm grateful that we continue to grow together. Our friendship means so much more to me than any disagreement ever could, and I wouldn't trade the bond we've built or the memories we've shared for anything. I can't wait to see what life has in store for us and all the beautiful memories we have yet to create.</p>
+        <p>I hope you never feel like you have to be anything other than yourself around me. Whether you're happy, stressed, tired, excited, or having one of those days when everything feels overwhelming, I hope you know that you are loved and appreciated through it all.</p>
+        <p>And because it's YOUR birthday, I wanted to do something special for you. I know you've been talking about wanting to try lymphatic drainage for the longest time, sooooo...</p>
+        <button class="surprise-button" id="surpriseBtn" type="button" aria-expanded="false" aria-controls="surpriseNote">🎁 Click here for your birthday surprise!</button>
+        <div class="surprise-note" id="surpriseNote" hidden>
+          <p class="birthday-shout"><strong>SURPRISEEEEE!!! 🎀🧖🏽‍♀️💗</strong></p>
+          <p>Your girl booked you a two-hour spa experience at iJoy Spa!! Everything is taken care of, including your ride there and the tip, so don't even THINK about opening that wallet! 😭💕 All you have to do is show up, relax, and enjoy being pampered because you deserve it.</p>
+          <p class="spa-time">Monday, October 26 · 10:00 AM–12:00 PM</p>
+          <img class="cheers-inside" src="https://web.archive.org/web/20091020113712im_/http://geocities.com/Heartland/Shores/7047/gifs/chclink.gif" alt="Celebratory champagne glasses" onerror="this.style.display='none'" />
+        </div>
+        <p>I hope this little gift reminds you that you're loved, appreciated, and worth celebrating, not just today but every single day.</p>
+        <p>Happy birthday again, my beautiful girl. Here's to another year of laughter, growth, late-night conversations, random adventures, and unforgettable memories.</p>
+        <p><strong>I love you sooooo much💗 Forever grateful for you.🎀</strong></p>
+        <p>With all my love,</p>
+        <p class="signature"><strong>Your girl, Arly 💕</strong></p>
+      </div>
+      <section class="spotify-section" aria-label="SZA Good Days">
+        <p class="spotify-title">And a song from your favorite artist, just for you ♡</p>
+        <iframe title="Good Days by SZA on Spotify" src="https://open.spotify.com/embed/track/4PMqSO5qyjpvzhlLI5GnID?utm_source=generator" width="100%" height="152" frameborder="0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        <p class="spotify-note">Press play above to listen to Good Days by SZA on Spotify. Spotify may require sign-in for full playback.</p>
+      </section>
+    </div>
+  </div>
+  <div id="confetti" aria-hidden="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>
